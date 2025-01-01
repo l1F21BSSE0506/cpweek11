@@ -1,0 +1,17 @@
+name: ci-wi
+on:
+  push:
+  branches: 
+  -develop
+
+  pull_request:
+  branches:
+    -develop
+  jobs:
+    build-job:
+    runs-on: ubuntu-latest
+    steps:
+    -name : welcome step
+    run: echo "welcome to github actions"
+    -name: checkout repository
+    uses: actions/checkout@v4
